@@ -2,6 +2,8 @@ package kr.ac.jejunu;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -12,10 +14,11 @@ public class ProductDaoTest {
 
 
     private ProductDao productDao;
-//    private ProductDao hallaProductDao;
+    private DaoFactory daoFactory;
     @Before
     public void setup() {
-        productDao = new ProductDao();
+        ApplicationContext applicationContext = new AnnotationConfigApplicationContext(DaoFactory.class);
+        productDao =applicationContext.getBean("productDao", ProductDao.class);
     }
 
     @Test
