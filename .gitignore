@@ -3,3 +3,5 @@
 out/production/classes/kr/ac/jejunu/Product.class
 out/production/classes/kr/ac/jejunu/ProductDao.class
 out/test/classes/kr/ac/jejunu/ProductDaoTest.class
+src/main/java/kr/ac/jejunu/HallaProductDao.java
+src/main/java/kr/ac/jejunu/JejuProductDao.java
